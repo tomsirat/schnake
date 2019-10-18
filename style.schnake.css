@@ -7,6 +7,7 @@ body {
     width: 1900px;
     background-image: url(https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0464/6979/rrr12x12_Pixel_Block_Solid_Grass_PRINT_FILE_shop_thumb.png);
     border: 1px solid black;
+    position: absolute;
 }
 
 #schnake {
@@ -17,13 +18,14 @@ body {
     background-repeat: no-repeat;
     left: 100px;
     top: 100px;
+    position: relative;
     
 }
 
 .schnakeup {
     background-image: url(schnakeup.png);
-    height: 130px;
-    width: 100px;
+    height: 100px;
+    width: 130px;
 }
 
 #fruit {
