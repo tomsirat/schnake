@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.schnake.css">
+    <script src="scriptSchnake.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+
+<body>
+
+    <script>
+
+        jQuery(document).ready(function () {
+
+            // create my elements
+
+            var board = $("<div id='board'>");
+            var schnake = $("<div id='schnake'>");
+            var fruit = $("<div id='fruit'>");
+
+            $("body").append(schnake);
+            $("body").append(fruit);
+            $("body").append(board);
+
+            //  random position fruit
+
+            $("#fruit").css('top', Math.random() * 725 + "px");
+            $("#fruit").css('left', Math.random() * 725 + "px");
+
+            //  move schnake down infinite
+            
+            var snakeDirection = "top"
+            var snakeDirectionValue = '+=5px'
+
+            setInterval(function () {
+
+                $("#schnake").css(snakeDirection, snakeDirectionValue);
+                $("#schnake").css('transitionDuration = 1s');
+
+            }, 100);
+
+            // set movement pad
+
+            $("body").keydown(function (evt) {
+                
+                if (evt.keyCode == 40) {//bas
+                    snakeDirection = "top"
+                    snakeDirectionValue = '+=5px'
+                    // $("#schnake").attr("src", "schnake.png"); change img schnake for position / not work
+                    
+                }
+                else if (evt.keyCode == 38) {//haut
+                    snakeDirection = "top"
+                    snakeDirectionValue = '-=5px'
+                    // $("#schnake").attr("src", "schnakeup.png"); change img schnake for position / not work
+                }
+                else if (evt.keyCode == 37) {//gauche
+                    snakeDirection = "left"
+                    snakeDirectionValue = '-=5px'
+                    // $("#schnake").attr("src, schnakeleft.png"); change img schnake for position / not work
+                }
+                else if (evt.keyCode == 39) {//droite
+                    snakeDirection = "left"
+                    snakeDirectionValue = '+=5px'
+                    // $("#schnake").attr(src, "schnakeright.png"); change img schnake for position / not work
+                }
+
+            });
+            
+        });
+
+    </script>
+
+</body>
+
+</html>

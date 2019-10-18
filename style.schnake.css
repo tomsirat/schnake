@@ -1,0 +1,27 @@
+body {
+    position: relative;
+    margin: auto;
+    width: 750px;
+}
+#board {
+    height: 750px;
+    width: 750px;
+    background-image: url(https://s3.amazonaws.com/spoonflower/public/design_thumbnails/0464/6979/rrr12x12_Pixel_Block_Solid_Grass_PRINT_FILE_shop_thumb.png);
+}
+
+#schnake {
+    position: absolute;
+    width: 100px;
+    height: 130px;
+    background-image: url(schnake.png);
+    background-repeat: no-repeat;
+    
+}
+
+#fruit {
+    position: absolute;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    background-image: url(orange.jpg);
+}
